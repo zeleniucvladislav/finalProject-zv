@@ -1,0 +1,25 @@
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+
+  &__main-title {
+    font-family: "Lato", sans-serif;
+    font-size: 1.9rem;
+    font-weight: 600;
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  &__title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.7rem;
+    font-weight: 500;
+  }
+  &__image img {
+    width: 20rem;
+    height: 20rem;
+  }
+}
