@@ -58,12 +58,29 @@ export default class Sign extends Component {
 class LoginBox extends Component {
   constructor(props) {
     super(props);
+
+    this.handleLogin = this.handleLogin.bind(this);
+    this.onChange = this.onChange.bind(this);
+
+    this.state = {
+      isVerified: false
+    };
+  }
+  handleLogin() {
+    if (this.state.isVerified) {
+      alert("You have successfully logged in");
+    } else {
+      alert("Please verify that you are a human!");
+    }
   }
 
+  onChange(value) {
+    console.log("Captcha value:", value);
+    this.setState({
+      isVerified: true
+    });
+  }
   render() {
-    function onChange(value) {
-      console.log("Captcha value:", value);
-    }
     return (
       <div className="inner-container">
         <div className="header">Login</div>
@@ -91,17 +108,21 @@ class LoginBox extends Component {
               placeholder="Password"
             />
           </div>
-          <button type="button" className="login-btn">
+          <button
+            type="button"
+            className="login-btn"
+            onClick={this.handleLogin}
+          >
             Login
           </button>
-          <Link to="/" className="sign-link">
+          <ReCAPTCHA
+            className="sign-captcha"
+            sitekey="6LfoFK4UAAAAAP1HMcFJdWyXb9ky1bpaLMxxxGlG"
+            onChange={this.onChange}
+          />
+          <Link to="/" className="sign-home-link">
             Homepage
           </Link>
-          <ReCAPTCHA
-            sitekey="6LfoFK4UAAAAAP1HMcFJdWyXb9ky1bpaLMxxxGlG"
-            onChange={onChange}
-          />
-          ,
         </div>
       </div>
     );
@@ -154,7 +175,7 @@ class RegisterBox extends Component {
           <button type="button" className="login-btn">
             Register
           </button>
-          <Link to="/" className="sign-link">
+          <Link to="/" className="sign-home-link">
             Homepage
           </Link>
         </div>

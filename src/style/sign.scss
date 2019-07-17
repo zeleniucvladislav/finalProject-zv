@@ -127,8 +127,13 @@
     color: white;
   }
 }
+.sign-captcha {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
 
-.sign-link {
+.sign-home-link {
   cursor: pointer;
   display: flex;
   justify-content: center;
