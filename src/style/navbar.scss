@@ -2,37 +2,56 @@
   background: $navbar-background;
   width: 100%;
   height: 15rem;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: [logo-s]1fr[logo-e free-s] 1.5fr[free-e logging-s] 1fr [logging-e];
   align-items: center;
-  padding-left: 15rem;
-  padding-right: 15rem;
   box-shadow: 0px 2px 20px 0px rgba(204, 204, 204, 1);
 }
 
 .navbar-logo img {
+  grid-column: logo-s/logo-e;
+  float: right;
   width: 20rem;
   height: 17rem;
 }
 
 .right-navbar-column {
   display: grid;
-  grid-template-rows: [log-s] 2fr [log-e time-s] 1fr [time-e];
-  grid-template-columns: 1fr;
-  grid-column-gap: 1.5rem;
+  grid-column: logging-s/logging-e;
+  grid-template-rows: [log-row-s] 2fr [log-row-e time-row-s] 1fr [time-row-e];
 }
-
+.logging-wrapper {
+  display: grid;
+  grid-template-columns: [sign-up-s] 1fr [sign-up-e sign-in-s] 1fr [sing-in-e free-s] 1fr [free-e];
+}
+.sign-up {
+  grid-column: sign-up-s/sign-up-e;
+}
+.sign-in {
+  grid-column: sign-in-s/sign-in-e;
+}
 .sign-in,
 .sign-up {
   font-family: "Montserrat", sans-serif;
-  grid-row: log-s/log-e;
+  grid-row: log-row-s/log-row-e;
   font-size: 1.6rem;
   font-weight: 600;
+}
+
+.link-to-sign {
+  text-decoration: none;
+  color: black;
+  transition: 0.5s ease-in-out;
+
+  &:hover {
+    color: $hover-color;
+    text-decoration: underline;
+  }
 }
 
 .time-clock {
   font-family: "Lora", serif;
   font-weight: 600;
   font-size: 1.5rem;
-  grid-row: time-s/time-e;
+  grid-row: time-row-s/time-row-e;
 }

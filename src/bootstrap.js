@@ -15,12 +15,18 @@ const createStoreWithMiddleware = applyMiddleware()(
 );
 
 import "./style/main.scss";
+import Sign from "./components/sign";
 
 function main() {
   ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
       <Router>
-        <App />
+        <div>
+          <Switch>
+            <Route exact path="/" component={App} />
+            <Route exact path="/sign" component={Sign} />
+          </Switch>
+        </div>
       </Router>
     </Provider>,
     document.querySelector(".app-wrapper")

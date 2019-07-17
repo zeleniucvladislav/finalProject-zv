@@ -1,0 +1,141 @@
+.singing-wrapper {
+  margin-top: 4rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box-controller {
+  display: flex;
+  max-width: 34rem;
+  min-width: 31rem;
+  height: 3.5rem;
+  box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
+  margin-bottom: 30px;
+  align-items: center;
+  transition: visibility 0.5s ease-out;
+}
+
+.controller {
+  flex: 1;
+  text-align: center;
+  height: 100%;
+  line-height: 2;
+  cursor: pointer;
+}
+
+.selected-controller {
+  transition: border 0.5s ease-out;
+  border-bottom: 2px solid $hover-color;
+}
+
+.box-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 34rem;
+  min-width: 31rem;
+  box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
+  border-radius: 6px;
+  padding: 24px;
+}
+
+.inner-container {
+  transition: visibility 0.2s ease-out;
+}
+
+.header {
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 17px;
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
+  border-bottom: 2px solid $hover-color;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-image {
+  display: flex;
+  justify-content: center;
+}
+.user-image img {
+  width: 12rem;
+  height: 12rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.login-label {
+  font-family: "Lora", serif;
+  font-size: 20px;
+  font-weight: 600;
+  padding-left: 5px;
+}
+
+.login-input {
+  height: 2.1em;
+  border-radius: 3px;
+  border: 1px solid $hover-color;
+  transition: border 0.4s ease-out;
+  padding: 1rem;
+  font-family: "Lora", serif;
+  font-size: 1.6rem;
+  color: #3e3e42;
+  background: rgba(15, 15, 15, 0.01);
+  &:hover {
+    border: 2px solid $hover-color;
+  }
+  &:focus {
+    border: 2px solid $hover-color;
+    box-shadow: 0px 0px 20px rgba(15, 15, 15, 0.2);
+  }
+}
+
+.login-input::placeholder {
+  font-family: "Lora", serif;
+  font-size: 16px;
+  color: rgba(15, 15, 15, 0.5);
+}
+
+.login-btn {
+  color: white;
+  padding: 2px 30px;
+  border: 0;
+  font-size: 18px;
+  border-radius: 3px;
+  font-family: "Lora", serif;
+  background-color: rgba(230, 195, 0, 0.7);
+  margin-top: 20px;
+  transition: background-color 0.3s ease-out;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-color;
+    color: white;
+  }
+}
+
+.sign-link {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  margin-top: 3rem;
+  transition: 0.5s ease-in-out;
+  &:hover {
+    color: $hover-color;
+  }
+}

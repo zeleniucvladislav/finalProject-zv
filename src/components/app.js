@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "./navbar";
 import Content from "./content";
-import CategoryNavbar from "./category-navbar";
 
 export default class App extends Component {
   constructor() {
@@ -10,9 +9,8 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="app">
+      <div className="app-wrapper">
         <Navbar />
-        <CategoryNavbar />
         <Content />
       </div>
     );
