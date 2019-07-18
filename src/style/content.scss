@@ -17,7 +17,7 @@
   &__content {
     display: grid;
     grid-template-columns: [image-col-s] 1fr [image-col-e content-col-s] 2fr [content-col-e];
-    grid-template-rows: [title-row-s] 3rem [title-row-e description-row-s] 17rem [description-row-e];
+    grid-template-rows: [title-row-s] 3rem [title-row-e description-row-s] 16.3rem [description-row-e related-link-row-s] 3rem [related-link-row-e];
     grid-column-gap: 3rem;
     margin-bottom: 4rem;
   }
@@ -26,7 +26,7 @@
     grid-row: title-row-s/title-row-e;
     font-family: "Montserrat", sans-serif;
     font-size: 1.7rem;
-    font-weight: 500;
+    font-weight: 700;
   }
   &__description {
     grid-column: content-col-s/content-col-e;
@@ -34,12 +34,27 @@
     font-family: "Montserrat", sans-serif;
     font-size: 1.6rem;
   }
+  &__related-link {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    grid-column: content-col-s/content-col-e;
+    grid-row: related-link-row-s/related-link-row-e;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+    color: #0000b3;
+
+    &:hover {
+      color: $hover-color;
+      text-decoration: underline;
+    }
+  }
 }
 
 .carousel {
   grid-column: image-col-s/image-col-e;
+  grid-row: title-row-s/related-link-row-e;
   width: 20rem;
-  height: 20rem;
+  height: 23rem;
 }
 
 .thumbs-wrapper {

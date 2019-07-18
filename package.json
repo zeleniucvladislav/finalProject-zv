@@ -60,6 +60,7 @@
     "react": "16.8.0",
     "react-dom": "16.8.0",
     "react-favicon": "0.0.16",
+    "react-google-maps": "^9.4.5",
     "react-google-recaptcha": "^1.1.0",
     "react-modal": "^3.9.1",
     "react-redux": "5.0.6",

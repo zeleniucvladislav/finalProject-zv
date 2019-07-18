@@ -24,6 +24,7 @@ export default class Content extends Component {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus sagittis erat, id molestie est tincidunt non. Nam sollicitudin varius malesuada. Ut mattis eros turpis, et vehicula nibh sagittis sed. Mauris urna mi, lacinia sed vehicula in, interdum a urna. Pellentesque facilisis urna et libero convallis, quis mollis ante sollicitudin. Nam blandit gravida posuere. Sed odio est, rutrum nec sapien vitae, sagittis ultricies velit. Phasellus venenatis lacus et pharetra hendrerit Etiam et semper purus. Mauris molestie ut ante condimentum ornare. In hac habitasse platea dictumst. Praesent orci felis, eleifend non tortor id, semper faucibus ex. Mauris imperdiet gravida nunc, et posuere neque rhoncus vitae. Etiam elementum nisi elementum, elementum felis in, tristique elit. Sed vestibulum elit nulla, elementum luctus orci pharetra sed. Sed dapibus tincidunt felis molestie sagittis. Donec massa dui, faucibus in nisl non, cursus accumsan risus. Proin imperdiet nec libero et vestibulum. Aenean porttitor malesuada leo ut rhoncus. Maecenas accumsan posuere porta.Quisque pretium faucibus sem quis commodo. Morbi accumsan nunc mi, a euismod neque gravida nec. Donec tempus, elit ac commodo vestibulum, mauris augue ultricies dolor, eu tincidunt elit purus vitae nibh. Donec condimentum fermentum egestas. Vestibulum tincidunt tortor sed elit pellentesque, ac accumsan ex finibus. Cras pellentesque tortor nulla, at eleifend lorem congue vel. Aenean vitae suscipit orci. Nulla sit amet accumsan tellus. Quisque sem leo, consectetur et tempor eu, convallis quis tortor. Aenean non lectus eu augue suscipit efficitur non non diam. Fusce lorem purus, accumsan ut metus iaculis, viverra bibendum elit. Phasellus feugiat nunc feugiat, ultrices tortor eu, vehicula nisi. Suspendisse potenti. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat.",
           image: python_image,
           second_image: react_image,
+          related_link: "https://www.python.org/",
           category: "Python"
         },
         {
@@ -31,6 +32,7 @@ export default class Content extends Component {
           title: "Second Title",
           description: "Description for 1 id",
           image: react_image,
+          related_link: "https://reactjs.org/",
           category: "React"
         },
         {
@@ -38,6 +40,7 @@ export default class Content extends Component {
           title: "Third Title",
           description: "Description for 2 id",
           image: react_image,
+          related_link: "https://reactjs.org/",
           category: "React"
         }
       ],
@@ -103,15 +106,25 @@ export default class Content extends Component {
                   >
                     {item.title}
                   </div>
+
                   <div className="content-wrapper__image">
                     <Carousel>
                       <div>{item.image}</div>
                       <div>{item.second_image}</div>
                     </Carousel>
                   </div>
+
                   <div className="content-wrapper__description">
-                    <Truncate lines={4}>{striptags(item.description)}</Truncate>
+                    <Truncate lines={3}>{striptags(item.description)}</Truncate>
                   </div>
+
+                  <a
+                    href={item.related_link}
+                    className="content-wrapper__related-link"
+                    target="_blank"
+                  >
+                    Related Link
+                  </a>
                 </div>
               ];
             })}
@@ -124,6 +137,7 @@ export default class Content extends Component {
         <div className="new-modal-link">
           <a onClick={this.handleContentClick}>Open Modal!</a>
         </div>
+
         <div />
       </div>
     );
