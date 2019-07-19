@@ -1,7 +1,11 @@
 .content-wrapper {
   display: grid;
-  grid-template-columns: [left-free-space-s]1fr[left-free-space-e content-s] 1.5fr [content-e right-free-space-s] 1fr [right-free-space-e];
   margin-top: 4rem;
+  grid-template-columns: [left-free-space-s]1fr[left-free-space-e content-s] 1.5fr [content-e right-free-space-s] 1fr [right-free-space-e];
+  @media screen and (max-width: 700px) {
+    margin: 3rem 3rem 0rem 3rem;
+    grid-template-columns: 1fr;
+  }
 
   &__main-title {
     grid-column: content-s/content-e;
@@ -10,6 +14,9 @@
     font-weight: 600;
     margin-bottom: 4rem;
     float: left;
+    @media screen and (max-width: 700px) {
+      font-size: 1.8rem;
+    }
   }
   &__info {
     grid-column: content-s/content-e;
@@ -20,6 +27,10 @@
     grid-template-rows: [title-row-s] 3rem [title-row-e description-row-s] 16.3rem [description-row-e related-link-row-s] 3rem [related-link-row-e];
     grid-column-gap: 3rem;
     margin-bottom: 4rem;
+    @media screen and (max-width: 700px) {
+      grid-template-columns: [image-col-s] 1fr [image-col-e content-col-s] 1fr [content-col-e];
+      grid-template-rows: [title-row-s] 3rem [title-row-e description-row-s] 12rem [description-row-e related-link-row-s] 3rem [related-link-row-e];
+    }
   }
   &__title {
     grid-column: content-col-s/content-col-e;
@@ -27,12 +38,19 @@
     font-family: "Montserrat", sans-serif;
     font-size: 1.7rem;
     font-weight: 700;
+    @media screen and (max-width: 700px) {
+      font-size: 1.5rem;
+    }
   }
   &__description {
+    margin-top: 1rem;
     grid-column: content-col-s/content-col-e;
     grid-row: description-row-s/description-row-e;
     font-family: "Montserrat", sans-serif;
     font-size: 1.6rem;
+    @media screen and (max-width: 700px) {
+      font-size: 1.4rem;
+    }
   }
   &__related-link {
     font-family: "Montserrat", sans-serif;
@@ -42,7 +60,11 @@
     text-decoration: none;
     transition: 0.5s ease-in-out;
     color: $link-color;
-
+    @media screen and (max-width: 700px) {
+      grid-column: image-col-s/image-col-e;
+      font-size: 1.4rem;
+      align-self: center;
+    }
     &:hover {
       color: $hover-color;
       text-decoration: underline;
@@ -57,8 +79,19 @@
     color: $link-color;
     justify-self: right;
 
+    @media screen and (max-width: 700px) {
+      font-size: 1.4rem;
+      justify-self: left;
+      align-self: center;
+    }
+
     &:hover {
       color: $hover-color;
+    }
+  }
+  &__image img {
+    @media screen and (max-width: 440px) {
+      width: 10rem;
     }
   }
 }
@@ -67,6 +100,10 @@
   grid-column: image-col-s/image-col-e;
   grid-row: title-row-s/related-link-row-e;
   width: 20rem;
+  @media screen and (max-width: 700px) {
+    grid-row: image-row-s/image-row-e;
+    width: 10rem;
+  }
 }
 
 .thumbs-wrapper {

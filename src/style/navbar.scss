@@ -4,6 +4,11 @@
   height: 15rem;
   display: grid;
   grid-template-columns: [logo-s]1fr[logo-e free-s] 1.5fr[free-e logging-s] 1fr [logging-e];
+  @media screen and (max-width: 700px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   align-items: center;
   box-shadow: 0px 2px 20px 0px rgba(204, 204, 204, 1);
 }
@@ -14,7 +19,6 @@
   width: 20rem;
   height: 17rem;
 }
-
 .right-navbar-column {
   display: grid;
   grid-column: logging-s/logging-e;
@@ -24,6 +28,10 @@
 .logging-wrapper {
   display: grid;
   grid-template-columns: [sign-up-s] 1fr [sign-up-e sign-in-s] 1fr [sing-in-e free-s] 1fr [free-e];
+  grid-column-gap: 1rem;
+  @media screen and (max-width: 700px) {
+    grid-template-columns: [sign-up-s]1fr[sign-up-e sing-in-s] 1fr [sing-in-e];
+  }
 }
 .sign-up {
   grid-column: sign-up-s/sign-up-e;
@@ -37,6 +45,9 @@
   grid-row: log-row-s/log-row-e;
   font-size: 1.5rem;
   font-weight: 600;
+  @media screen and (max-width: 700px) {
+    font-size: 1.4rem;
+  }
 }
 
 .link-to-sign {
@@ -57,6 +68,11 @@
   font-family: "Lora", serif;
   font-weight: 500;
   font-size: 1.4rem;
+  grid-column-gap: 1rem;
+  @media screen and (max-width: 700px) {
+    font-size: 1.3rem;
+    grid-template-columns: [date-col-s] 1fr [date-col-e clock-col-s] 1fr [clock-col-e];
+  }
 
   &__date {
     grid-column: date-col-s/date-col-e;
