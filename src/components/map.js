@@ -29,7 +29,7 @@ export default class ModalMap extends Component {
         <WrappedMap
           googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyBswg-99qFUpeGHZVj62T7eI_uOADHjzQc`}
           loadingElement={<div style={{ height: `100%` }} />}
-          containerElement={<div style={{ height: `400px` }} />}
+          containerElement={<div style={{ height: `300px` }} />}
           mapElement={<div style={{ height: `100%` }} />}
         />
       </div>

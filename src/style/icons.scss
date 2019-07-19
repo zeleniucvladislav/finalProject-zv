@@ -1,0 +1,15 @@
+.to-top {
+  display: grid;
+  grid-template-columns: [space-1-s]1fr[space-1-e space-2-s ] 2fr[space-2-e icon-s] 1fr [icon-e];
+  &__icon {
+    color: $link-color;
+    font-size: 3rem;
+    grid-column: icon-s/icon-e;
+    margin-left: 2rem;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    &:hover {
+      color: $hover-color;
+    }
+  }
+}

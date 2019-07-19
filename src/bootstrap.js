@@ -16,6 +16,7 @@ const createStoreWithMiddleware = applyMiddleware()(
 
 import "./style/main.scss";
 import Sign from "./components/sign";
+import About from "./components/about";
 
 function main() {
   ReactDOM.render(
@@ -25,6 +26,7 @@ function main() {
           <Switch>
             <Route exact path="/" component={App} />
             <Route exact path="/sign" component={Sign} />
+            <Route exact path="/about" component={About} />
           </Switch>
         </div>
       </Router>

@@ -41,11 +41,24 @@
     grid-row: related-link-row-s/related-link-row-e;
     text-decoration: none;
     transition: 0.5s ease-in-out;
-    color: #0000b3;
+    color: $link-color;
 
     &:hover {
       color: $hover-color;
       text-decoration: underline;
+    }
+  }
+  &__author {
+    font-family: "Dancing Script", cursive;
+    font-size: 1.5rem;
+    grid-column: content-col-s/content-col-e;
+    grid-row: related-link-row-s/related-link-row-e;
+    transition: 0.5s ease-in-out;
+    color: $link-color;
+    justify-self: right;
+
+    &:hover {
+      color: $hover-color;
     }
   }
 }
@@ -54,7 +67,6 @@
   grid-column: image-col-s/image-col-e;
   grid-row: title-row-s/related-link-row-e;
   width: 20rem;
-  height: 23rem;
 }
 
 .thumbs-wrapper {

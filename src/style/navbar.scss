@@ -18,7 +18,8 @@
 .right-navbar-column {
   display: grid;
   grid-column: logging-s/logging-e;
-  grid-template-rows: [log-row-s] 2fr [log-row-e time-row-s] 1fr [time-row-e];
+  grid-template-rows: [log-row-s] 1fr [log-row-e time-row-s] 1fr [time-row-e];
+  grid-row-gap: 1rem;
 }
 .logging-wrapper {
   display: grid;
@@ -34,7 +35,7 @@
 .sign-up {
   font-family: "Montserrat", sans-serif;
   grid-row: log-row-s/log-row-e;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
@@ -49,9 +50,20 @@
   }
 }
 
-.time-clock {
+.time-wrapper {
+  display: grid;
+  grid-template-columns: [date-col-s] 1fr [date-col-e clock-col-s] 1fr [clock-col-e free-col-s] 1fr [free-col-e];
+  grid-template-rows: 1fr;
   font-family: "Lora", serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  grid-row: time-row-s/time-row-e;
+  font-weight: 500;
+  font-size: 1.4rem;
+
+  &__date {
+    grid-column: date-col-s/date-col-e;
+    grid-row: time-row-s/time-row-e;
+  }
+  &__clock {
+    grid-column: clock-col-s/clock-col-e;
+    grid-row: time-row-s/time-row-e;
+  }
 }

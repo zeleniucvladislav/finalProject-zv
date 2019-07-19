@@ -15,7 +15,7 @@ export default class ContentModal extends Component {
         right: "auto",
         marginRight: "-50%",
         transform: "translate(-50%, -50%",
-        width: "800px",
+        width: "500px",
         height: "500px"
       },
       overlay: {
@@ -33,17 +33,21 @@ export default class ContentModal extends Component {
         }}
         isOpen={this.props.modalIsOpen}
       >
-        <h2 className="website-information-title">Information About website</h2>
-        <ModalMap />
-        <div className="website-information">
-          <div className="website-information__phone">
-            Phone Number : 555-555-555
-          </div>
-          <div className="website-information__adress">
-            Adress : Chisinau,Alexandru Cel Bun
-          </div>
-          <div className="website-information__email">
-            Email : random@gmail.com
+        <div className="modal-information-wrapper">
+          <h2 className="website-information-title">
+            Information About website
+          </h2>
+          <ModalMap />
+          <div className="website-information">
+            <div className="website-information__phone">
+              Phone Number : 555-555-555
+            </div>
+            <div className="website-information__adress">
+              Adress : Chisinau,Alexandru Cel Bun
+            </div>
+            <div className="website-information__email">
+              Email : random@gmail.com
+            </div>
           </div>
         </div>
       </ReactModal>
