@@ -17,7 +17,7 @@ const createStoreWithMiddleware = applyMiddleware()(
 import "./style/main.scss";
 
 import Sign from "./components/sign";
-import About from "./components/about";
+import About from "./components/about/about";
 
 function main() {
   ReactDOM.render(

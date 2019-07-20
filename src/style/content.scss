@@ -60,7 +60,7 @@
     text-decoration: none;
     transition: 0.5s ease-in-out;
     color: $link-color;
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 990px) {
       grid-column: image-col-s/image-col-e;
       font-size: 1.4rem;
       align-self: center;
@@ -79,7 +79,7 @@
     color: $link-color;
     justify-self: right;
 
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 990px) {
       font-size: 1.4rem;
       justify-self: left;
       align-self: center;
@@ -88,10 +88,19 @@
     &:hover {
       color: $hover-color;
     }
-  }
-  &__image img {
-    @media screen and (max-width: 440px) {
-      width: 10rem;
+    &__image {
+      @media screen and (max-width: 440px) {
+        width: 10rem;
+        height: 13rem;
+      }
+      @media screen and (min-width: 400px) {
+        width: 13rem;
+        height: 15rem;
+      }
+      @media screen and (min-width: 1000px) {
+        width: 20rem;
+        height: 20rem;
+      }
     }
   }
 }
@@ -102,7 +111,21 @@
   width: 20rem;
   @media screen and (max-width: 700px) {
     grid-row: image-row-s/image-row-e;
+  }
+}
+
+.carousel img {
+  @media screen and (max-width: 440px) {
     width: 10rem;
+    height: 14rem;
+  }
+  @media screen and (min-width: 400px) {
+    width: 13rem;
+    height: 15rem;
+  }
+  @media screen and (min-width: 1000px) {
+    width: 20rem;
+    height: 20rem;
   }
 }
 

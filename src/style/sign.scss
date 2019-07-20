@@ -6,12 +6,14 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media screen and (max-width: 500px) {
+    margin-top: 3rem;
+  }
 }
 
 .box-controller {
   display: flex;
-  max-width: 34rem;
-  min-width: 31rem;
+  width: 34rem;
   height: 3.5rem;
   box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
   margin-bottom: 30px;
@@ -35,11 +37,13 @@
 .box-container {
   display: flex;
   flex-direction: column;
-  max-width: 34rem;
-  min-width: 31rem;
+  width: 34rem;
   box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
   border-radius: 6px;
-  padding: 24px;
+  padding: 2.4rem;
+  @media screen and (max-width: 500px) {
+    padding: 1rem;
+  }
 }
 
 .inner-container {
@@ -51,8 +55,11 @@
   padding: 5px;
   margin-bottom: 17px;
   font-family: "Lato", sans-serif;
-  font-size: 22px;
+  font-size: 2.2rem;
   border-bottom: 2px solid $hover-color;
+  @media screen and (max-width: 500px) {
+    font-size: 1.8rem;
+  }
 }
 
 .box {
@@ -68,22 +75,30 @@
 .user-image img {
   width: 12rem;
   height: 12rem;
+  @media screen and (max-width: 500px) {
+    width: 9rem;
+    height: 9rem;
+  }
 }
 
 .input-group {
   display: flex;
   flex-direction: column;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-.login-label {
+label {
+  display: flex;
+  justify-content: center;
   font-family: "Lora", serif;
-  font-size: 20px;
-  font-weight: 600;
-  padding-left: 5px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding-bottom: 1rem;
+  @media screen and (max-width: 500px) {
+    font-size: 1.1rem;
+  }
 }
-
 .login-input {
   height: 2.1em;
   border-radius: 3px;
@@ -100,6 +115,10 @@
   &:focus {
     border: 2px solid $hover-color;
     box-shadow: 0px 0px 20px rgba(15, 15, 15, 0.2);
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 1.3rem;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
   }
 }
 

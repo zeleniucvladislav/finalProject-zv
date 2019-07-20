@@ -149,7 +149,7 @@ export default class Content extends Component {
 
   render() {
     return (
-      <div className="main-content-wrapper">
+      <div className="main-content-wrapper" id="homepage">
         <div className="category-navbar">
           <div className="category-navbar__links">
             <a onClick={() => this.filterAll()}>All</a>
@@ -181,7 +181,7 @@ export default class Content extends Component {
                   </div>
 
                   <div className="content-wrapper__description">
-                    <Truncate lines={4}>{striptags(item.description)}</Truncate>
+                    <Truncate lines={3}>{striptags(item.description)}</Truncate>
                   </div>
 
                   <a
