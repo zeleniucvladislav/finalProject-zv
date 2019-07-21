@@ -11,6 +11,23 @@ html {
   font-family: "montserrat";
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 2rem;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 2rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: -webkit-linear-gradient(rgb(145, 168, 238), rgb(65, 105, 225));
+}
+
 body {
   overflow-x: hidden;
   font-weight: normal;
