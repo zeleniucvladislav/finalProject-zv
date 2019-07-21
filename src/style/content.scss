@@ -2,11 +2,9 @@
   display: grid;
   margin-top: 4rem;
   grid-template-columns: [left-free-space-s]1fr[left-free-space-e content-s] 1.5fr [content-e right-free-space-s] 1fr [right-free-space-e];
-  @media screen and (max-width: 700px) {
-    margin: 3rem 3rem 0rem 3rem;
-    grid-template-columns: 1fr;
+  @media screen and (max-width: 560px) {
+    grid-template-columns: [left-free-space-s]0.5fr[left-free-space-e content-s] 1.5fr [content-e right-free-space-s] 0.5fr [right-free-space-e];
   }
-
   &__main-title {
     grid-column: content-s/content-e;
     font-family: "Lato", sans-serif;
@@ -15,7 +13,8 @@
     margin-bottom: 4rem;
     float: left;
     @media screen and (max-width: 700px) {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
+      margin-bottom: 3rem;
     }
   }
   &__info {
@@ -49,7 +48,7 @@
     font-family: "Montserrat", sans-serif;
     font-size: 1.6rem;
     @media screen and (max-width: 700px) {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
     }
   }
   &__related-link {
@@ -60,10 +59,12 @@
     text-decoration: none;
     transition: 0.5s ease-in-out;
     color: $link-color;
+    margin-top: 1rem;
     @media screen and (max-width: 990px) {
       grid-column: image-col-s/image-col-e;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       align-self: center;
+      margin-top: 2rem;
     }
     &:hover {
       color: $hover-color;
@@ -78,9 +79,11 @@
     transition: 0.5s ease-in-out;
     color: $link-color;
     justify-self: right;
+    margin-top: 1rem;
 
     @media screen and (max-width: 990px) {
-      font-size: 1.4rem;
+      margin-top: 2rem;
+      font-size: 1.3rem;
       justify-self: left;
       align-self: center;
     }
@@ -88,19 +91,24 @@
     &:hover {
       color: $hover-color;
     }
-    &__image {
-      @media screen and (max-width: 440px) {
-        width: 10rem;
-        height: 13rem;
-      }
-      @media screen and (min-width: 400px) {
-        width: 13rem;
-        height: 15rem;
-      }
-      @media screen and (min-width: 1000px) {
-        width: 20rem;
-        height: 20rem;
-      }
+  }
+
+  &__category-image {
+    color: white;
+    background-color: royalblue;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    padding-left: 2rem;
+  }
+  &__image {
+    @media screen and (max-width: 440px) {
+      width: 13rem;
+    }
+    @media screen and (min-width: 441px) {
+      width: 15rem;
+    }
+    @media screen and (min-width: 1000px) {
+      width: 20rem;
     }
   }
 }
@@ -109,22 +117,19 @@
   grid-column: image-col-s/image-col-e;
   grid-row: title-row-s/related-link-row-e;
   width: 20rem;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 600px) {
     grid-row: image-row-s/image-row-e;
   }
 }
 
 .carousel img {
   @media screen and (max-width: 440px) {
-    width: 10rem;
-    height: 14rem;
+    height: 13rem;
   }
-  @media screen and (min-width: 400px) {
-    width: 13rem;
+  @media screen and (min-width: 441px) {
     height: 15rem;
   }
   @media screen and (min-width: 1000px) {
-    width: 20rem;
     height: 20rem;
   }
 }

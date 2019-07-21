@@ -5,18 +5,18 @@ import striptags from "striptags";
 import Truncate from "react-truncate";
 import { Link } from "react-router-dom";
 
-import ToTop from "./toTop";
+import ToTop from "../helpers/toTop";
 import ContentModal from "./content-modal";
 
-import PythonImage_1 from "../../static/assets/python_1.png";
-import PythonImage_2 from "../../static/assets/python_2.png";
-import PythonImage_3 from "../../static/assets/python_3.png";
-import ReactImage_1 from "../../static/assets/react_1.png";
-import ReactImage_2 from "../../static/assets/react_2.png";
-import ReactImage_3 from "../../static/assets/react_3.png";
-import Cplus_1 from "../../static/assets/cplus_1.jpg";
-import Cplus_2 from "../../static/assets/cplus_2.png";
-import Cplus_3 from "../../static/assets/cplus_3.png";
+import PythonImage_1 from "../../../static/assets/python_1.png";
+import PythonImage_2 from "../../../static/assets/python_2.png";
+import PythonImage_3 from "../../../static/assets/python_3.png";
+import ReactImage_1 from "../../../static/assets/react_1.png";
+import ReactImage_2 from "../../../static/assets/react_2.png";
+import ReactImage_3 from "../../../static/assets/react_3.png";
+import Cplus_1 from "../../../static/assets/cplus_1.jpg";
+import Cplus_2 from "../../../static/assets/cplus_2.png";
+import Cplus_3 from "../../../static/assets/cplus_3.png";
 
 export default class Content extends Component {
   constructor() {
@@ -178,6 +178,9 @@ export default class Content extends Component {
                       <div>{item.second_image}</div>
                       <div>{item.third_image}</div>
                     </Carousel>
+                    <div className="content-wrapper__category-image">
+                      {item.category}
+                    </div>
                   </div>
 
                   <div className="content-wrapper__description">

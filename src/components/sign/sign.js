@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
 
-import UserImg from "../../static/assets/username.png";
+import UserImg from "../../../static/assets/username.png";
 
 export default class Sign extends Component {
   constructor(props) {

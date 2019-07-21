@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import logo from "../../static/assets/logo.png";
+import logo from "../../../static/assets/logo.png";
 import Clock from "./clock";
 
 export default class Navbar extends Component {
