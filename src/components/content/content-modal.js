@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactModal from "react-modal";
 import MediaQuery from "react-responsive";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import ModalMap from "./map";
 
@@ -54,18 +55,27 @@ export default class ContentModal extends Component {
           >
             <div className="modal-information-wrapper">
               <h2 className="website-information-title">
-                Information About website
+                Website Contact Information
               </h2>
               <ModalMap />
               <div className="website-information">
                 <div className="website-information__phone">
-                  Phone Number : 555-555-555
+                  <span className="website-information__icon">
+                    <FontAwesomeIcon icon="phone" />
+                  </span>
+                  555-555-555
                 </div>
                 <div className="website-information__adress">
-                  Adress : Chisinau,Alexandru Cel Bun
+                  <span className="website-information__icon">
+                    <FontAwesomeIcon icon="map-marked-alt" />
+                  </span>
+                  Chisinau,Alexandru Cel Bun
                 </div>
                 <div className="website-information__email">
-                  Email : random@gmail.com
+                  <span className="website-information__icon">
+                    <FontAwesomeIcon icon="envelope" />
+                  </span>
+                  random@gmail.com
                 </div>
               </div>
             </div>
@@ -81,18 +91,27 @@ export default class ContentModal extends Component {
           >
             <div className="modal-information-wrapper">
               <h2 className="website-information-title">
-                Information About website
+                Website Contact Information
               </h2>
               <ModalMap />
               <div className="website-information">
                 <div className="website-information__phone">
-                  Phone Number : 555-555-555
+                  <span className="website-information__icon">
+                    <FontAwesomeIcon icon="phone" />
+                  </span>
+                  555-555-555
                 </div>
                 <div className="website-information__adress">
-                  Adress : Chisinau,Alexandru Cel Bun
+                  <span className="website-information__icon">
+                    <FontAwesomeIcon icon="map-marked-alt" />
+                  </span>
+                  Chisinau,Alexandru Cel Bun
                 </div>
                 <div className="website-information__email">
-                  Email : random@gmail.com
+                  <span className="website-information__icon">
+                    <FontAwesomeIcon icon="envelope" />
+                  </span>
+                  random@gmail.com
                 </div>
               </div>
             </div>

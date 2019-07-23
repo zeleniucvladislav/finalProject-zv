@@ -7,8 +7,8 @@
 
 .website-information {
   font-family: "Lato", sans-serif;
-  font-size: 1.3rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 500;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -20,5 +20,11 @@
   }
   &__email {
     padding-top: 0.5rem;
+  }
+
+  &__icon {
+    color: royalblue;
+    margin-right: 1rem;
+    font-size: 1.5rem;
   }
 }
