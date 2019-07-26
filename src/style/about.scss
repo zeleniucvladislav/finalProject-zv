@@ -27,6 +27,16 @@
   &__3 {
     margin-left: 3rem;
   }
+  &__4 {
+    color: black;
+    margin-left: 3rem;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+      color: $hover-color;
+    }
+  }
 }
 .about-navbar > .active {
   border-bottom: 1px solid black;

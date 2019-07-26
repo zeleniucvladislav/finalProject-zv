@@ -52,6 +52,9 @@ export default class About extends Component {
           >
             Section 3
           </Link>
+          <a href="/" className="about-navbar__4">
+            Homepage
+          </a>
         </div>
 
         <div className="content-about-wrapper">
