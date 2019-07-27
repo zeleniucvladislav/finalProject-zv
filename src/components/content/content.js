@@ -146,7 +146,6 @@ export default class Content extends Component {
                 })
               }
             >
-              {" "}
               Python
             </a>
             <a
@@ -156,7 +155,6 @@ export default class Content extends Component {
                 })
               }
             >
-              {" "}
               React
             </a>
             <a
@@ -166,7 +164,6 @@ export default class Content extends Component {
                 })
               }
             >
-              {" "}
               C++
             </a>
           </div>
